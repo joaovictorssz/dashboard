@@ -24,7 +24,7 @@ export default function Customers(){
                 
                 <main className="flex flex-col m-4 bg-white ">
 
-                    <header className=" font-bold p-4 w-full flex justify-between">
+                    <header className=" font-bold p-4 w-full flex justify-between sm:hidden">
                         <span className="w-1/4">Name:</span>
                         <span className="w-1/4">E-mail:</span>
                         <span className="w-1/4">Last order:</span>
