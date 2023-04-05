@@ -13,10 +13,10 @@ export const  Sidebar = ({children}:{children:  ReactNode})=>{
                 <section className="flex flex-col items-center justify-between">
                     <SidebarItem isHome={true} href={'/'} icon={<RxSketchLogo size={20}/>}/>
                     <span className="border-[1px] border-gray-200 w-full  mb-1 "></span>
-                    <SidebarItem href="/dashboard" isHome={false} icon={<RxDashboard/>}/>
-                    <SidebarItem  href="/costumers" isHome={false} icon={<RxPerson/>}/>
-                    <SidebarItem href="/" isHome={false} icon={<AiOutlineShopping/>}/>
-                    <SidebarItem href="/" isHome={false} icon={<FiSettings/>}/>
+                    <SidebarItem href="/" isHome={false} icon={<RxDashboard/>}/>
+                    <SidebarItem  href="/customers" isHome={false} icon={<RxPerson/>}/>
+                    <SidebarItem href="/orders" isHome={false} icon={<AiOutlineShopping/>}/>
+                    <SidebarItem href="/configuration" isHome={false} icon={<FiSettings/>}/>
                 </section>
 
             </aside>

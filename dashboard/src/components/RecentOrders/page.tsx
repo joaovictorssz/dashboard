@@ -2,16 +2,17 @@
 
 import React, { useEffect, useState } from 'react'
 import RecentItem from './RecentItem/page'
-import { RecentOrdersData, Transaction } from '@/utils/RecentOrdersData';
+import { data, Customer } from '@/utils/RecentOrdersData'
 
 export default function RecentOrders() {
 
-  const [recentOrders, setRecentOrders] = useState<Transaction[]>([])
+
+  const [recentOrders, setRecentOrders] = useState<Customer[]>([])
 
   useEffect(()=>{
-    setRecentOrders(RecentOrdersData(recentOrders)) 
-
-  }, [])
+    setRecentOrders(data)
+  } 
+  , [])
 
   return (
     <div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white  overflow-scroll ">
@@ -25,7 +26,8 @@ export default function RecentOrders() {
             method={element.method} 
             name={element.name} 
             status={element.status} 
-            total={element.total}/>
+            total={element.total}
+            key={Math.random()}/>
           })
 
           :  <p>None recent orders</p>

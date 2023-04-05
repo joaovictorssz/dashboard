@@ -17,7 +17,7 @@ export default function Home() {
 
       <Sidebar>
       <div className='h-full w-full'>
-          <Header/>
+          <Header title={'Dashboard'}/>
           <TopCard/>
 
           <div className='p-4 grid md:grid-cols-3 grid-cols-1 gap-4'>

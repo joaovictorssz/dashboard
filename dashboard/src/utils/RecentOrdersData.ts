@@ -1,61 +1,135 @@
-interface Name {
+export interface Customer {
+  id: number;
+  name: {
     first: string;
     last: string;
-  }
-  
-  export interface Transaction {
-    id: number;
-    name: Name;
-    total: number;
-    status: 'failed' | 'successful' | 'processing';
-    method: string;
-    date: string;
-  }
-  
-  const names: string[] = ['Alice', 'Bob', 'Carol', 'Dave', 'Eve', 'Frank', 'Grace', 'Heidi', 'Ivan', 'Judy'];
-  const institutions: string[] = ['Bank A', 'Bank B', 'Bank C', 'Bank D'];
-  
-  function getRandomName(): string {
-    return names[Math.floor(Math.random() * names.length)];
-  }
-  
-  function getRandomInstitution(): string {
-    return institutions[Math.floor(Math.random() * institutions.length)];
-  }
-  
-  function getRandomStatus(): 'failed' | 'successful' | 'processing' {
-    const statuses: Array<'failed' | 'successful' | 'processing'> = ['failed', 'successful', 'processing'];
-    return statuses[Math.floor(Math.random() * statuses.length)];
-  }
-  
-  function getRandomDate(): string {
-    const start: Date = new Date(2020, 0, 1);
-    const end: Date = new Date(2023, 3, 5);
-    const randomDate: Date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-    return randomDate.toISOString().slice(0, 10);
-  }
-  
-function generateRandomData(): Transaction {
-    const id: number = Math.floor(Math.random() * 10000);
-    const name: Name = {
-      first: getRandomName(),
-      last: getRandomName()
-    };
-    const total: number = parseFloat((Math.random() * 1000).toFixed(2));
-    const status: 'failed' | 'successful' | 'processing' = getRandomStatus();
-    const method: string = getRandomInstitution();
-    const date: string = getRandomDate();
-  
-    return { id, name, total, status, method, date };
-  }
+  };
+  email: string;
+  total: number;
+  status: 'failed' | 'successful' | 'processing';
+  method: string;
+  date: string;
+}
 
-  export function RecentOrdersData(dataArray: Transaction[]){
-      
-
-  
-  for (let i: number = 0; i < 10; i++) {
-    dataArray.push(generateRandomData());
+export const data:  Customer[] = [
+  {
+    id: 1,
+    name: {
+      first: "Alice",
+      last: "Smith"
+    },
+    email: "alice.smith@example.com",
+    total: 123.45,
+    status: "failed",
+    method: "Banco do Brasil",
+    date: "2022-03-20"
+  },
+  {
+    id: 2,
+    name: {
+      first: "Bob",
+      last: "Johnson"
+    },
+    email: "bob.johnson@example.com",
+    total: 678.90,
+    status: "successful",
+    method: "Itaú",
+    date: "2022-02-15"
+  },
+  {
+    id: 3,
+    name: {
+      first: "Carol",
+      last: "Williams"
+    },
+    email: "carol.williams@example.com",
+    total: 234.56,
+    status: "processing",
+    method: "Santander",
+    date: "2022-04-01"
+  },
+  {
+    id: 4,
+    name: {
+      first: "Dave",
+      last: "Brown"
+    },
+    email: "dave.brown@example.com",
+    total: 789.01,
+    status: "successful",
+    method: "Bradesco",
+    date: "2022-01-10"
+  },
+  {
+    id: 5,
+    name: {
+      first: "Eve",
+      last: "Jones"
+    },
+    email: "eve.jones@example.com",
+    total: 345.67,
+    status: "processing",
+    method: "Caixa Econômica",
+    date: "2022-03-25"
+  },
+  {
+    id: 6,
+    name: {
+      first: "Frank",
+      last: "Davis"
+    },
+    email: "frank.davis@example.com",
+    total: 901.23,
+    status: "failed",
+    method: "Banco do Brasil",
+    date: "2022-02-01"
+  },
+  {
+    id: 7,
+    name: {
+      first: "Grace",
+      last: "Garcia"
+    },
+    email: "grace.garcia@example.com",
+    total: 456.78,
+    status: "successful",
+    method: "Itaú",
+    date: "2022-04-02"
+  },
+  {
+    id: 8,
+    name: {
+      first: "Heidi",
+      last: "Rodriguez"
+    },
+    email: "heidi.rodriguez@example.com",
+    total: 12.34,
+    status: "processing",
+    method: "Santander",
+    date: "2022-03-31"
+  },
+  {
+    id: 9,
+    name: {
+      first: "Ivan",
+      last: "Martinez"
+    },
+    email: "ivan.martinez@example.com",
+    total: 567.89,
+    status: "failed",
+    method: "Bradesco",
+    date: "2022-01-20"
+  },
+  {
+    id: 10,
+    name: {
+      first: "Julia",
+      last: "Taylor"
+    },
+    email: "julia.taylor@example.com",
+    total: 234.56,
+    status: "successful",
+    method: "Caixa Econômica",
+    date: "2022-02-05"
   }
-  
-  return (dataArray);
-  }
+]
