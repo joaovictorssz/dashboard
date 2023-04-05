@@ -22,15 +22,17 @@ export default function Customers(){
             <div className='h-full w-full'>
                 <Header title={'Customers'}/>
                 
-                <main className="flex flex-col m-4 bg-white">
+                <main className="flex flex-col m-4 bg-white ">
 
-                    <header className="p-4 w-full flex justify-between">
-                        <span className="w-3/5">Name:</span>
-                        <span className="w-2/5">E-mail:</span>
+                    <header className=" font-bold p-4 w-full flex justify-between">
+                        <span className="w-1/4">Name:</span>
+                        <span className="w-1/4">E-mail:</span>
+                        <span className="w-1/4">Last order:</span>
+                        <span className="w-1/4">Method:</span>
                     </header>
                     {
                         customers ? customers.map((element, id)=>{
-                            return <CustomerItem key={Math.random()} email={element.email} name={{first: element.name.first, last: element.name.last}}/>
+                            return <CustomerItem method={element.method} date={element.date}  key={Math.random()} email={element.email} name={{first: element.name.first, last: element.name.last}}/>
                         }) : <></>
                     }
                 </main>
