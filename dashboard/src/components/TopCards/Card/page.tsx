@@ -7,7 +7,7 @@ export default function Card({value, origin, percent}:
         percent: number
     }) {
   return (
-    <div className='lg:col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg'>
+    <div className='lg:col-span-1 dark:bg-slate-800 dark:border-slate-700 bg-white flex justify-between w-full border p-4 rounded-lg'>
         <div className='flex flex-col w-full pb-4'>
             <p className='text-2xl font-bold'>${value},00</p>
             <p className='text-gray-600'>{origin}</p>

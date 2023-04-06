@@ -78,7 +78,7 @@ export default function BarChart() {
         })
     }, [])
   return (
-    <div className='w-full md:col-span-2 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white '>
+    <div className='w-full md:col-span-2 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg dark:border-slate-700 dark:bg-slate-700 bg-white '>
         {
             chartData ? <Bar data={chartData} options={chartOptios}/> : <></>
         }

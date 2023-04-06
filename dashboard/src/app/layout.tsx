@@ -1,3 +1,4 @@
+
 import './globals.css'
 
 export const metadata = {
@@ -10,9 +11,17 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <html lang="en" className='h-screen'>
-      <body>{children}</body>
-    </html>
+  return ( 
+
+      <html lang="en" className='h-screen'>
+        
+          <body>
+
+            {children}
+
+          </body>
+        
+      </html>
+
   )
 }
